@@ -115,5 +115,11 @@ please find the docker-compose file for container orchestration along with added
 Please find the Jenkinsfile for automation and deployment in the present repository along with added comments for explanation.
 
 # Creating a Pipeline job on Jenkins
+STEP 1 : Jenkins Dashboard > New Item > Provided Item Name > Select Pipeline
+STEP 2 : Pipeline > Choose Definition as Pipeline Script from SCM > Choose SCM as Git
+STEP 3 : Provide Git Repo URL and github credentials id under which git token for integration was stored.
+STEP 4 : Specify the Git Branch from where the code will be pulled.
 
+Key points to note :
+Do allow the ip of the host on which project is being deployed in the settings.py file (Allowed hosts section)
 
