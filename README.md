@@ -1,38 +1,91 @@
-# python-postgres-jenkinsCI-CD
+# Python-Postgres-Jenkins CI/CD
 
-# Setting up environment
-- setting up jenkins
-  Update System
+This project is a **Python-based web application** (built using **Django**) that has been fully **containerized with Docker** for consistent and portable deployments.  
+It uses **Docker Compose** to orchestrate application services and spin up containers seamlessly.
+
+The **CI/CD pipeline** is automated using **Jenkins**, which builds, tests, and deploys the application automatically.  
+During deployment, Jenkins securely retrieves **PostgreSQL database credentials** from its **Credentials Manager** and exports them as environment variables to **Docker Compose**.  
+These variables are then injected into the running container, enabling the application to connect to the **PostgreSQL database** that I set up & hosted on the same server (host machine).
+
+This setup ensures a completely automated and reproducible deployment workflow that eliminates manual configuration, secures sensitive credentials, and demonstrates practical integration of Github, Docker, Docker Compose, Jenkins, and PostgreSQL in a real-world DevOps pipeline.
+
+---
+
+## Tech Stack & Tools
+
+- **Python (Django)** — Backend web framework  
+- **PostgreSQL** — Relational database  
+- **Docker** — Containerization  
+- **Docker Compose** — Multi-container orchestration  
+- **Jenkins** — Continuous Integration & Deployment  
+- **GitHub** — Version control and source management  
+
+---
+
+## Deployment Flow
+
+1. **Code Push** → Application source is pushed to GitHub.
+2. **DB Setup** → Postgresql set-up & hosted on host machine. 
+3. **Jenkins Trigger** → Jenkins pipeline starts automatically.   
+4. **Credential Injection** → Jenkins exports DB credentials to Docker Compose.  
+5. **Container Startup** → Docker Compose builds docker images using docker file, spins up containers and connects to PostgreSQL DB.  
+6. **Deployment Complete** → Application runs successfully on the host machine.
+
+---
+
+# Project Set-up & Execution
+
+## Setting up environment
+### 1. Setting Up Jenkins
+> Update System Packages
+```bash
 sudo apt update
 sudo apt upgrade -y
-  Install Java & verify
+```
+> Install Java & verify
+```bash
 sudo apt install fontconfig openjdk-17-jre -y
 java -version
-  Add Jenkins Repository Key
+```
+> Add Jenkins Repository Key
+```bash
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
-  Add Jenkins APT Repository
+```
+> Add Jenkins APT Repository
+```bash
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
-  Install Jenkins
+```
+> Install Jenkins
+```bash
 sudo apt update
 sudo apt install jenkins -y
-  Start and Enable Jenkins Service
+```
+> Start and Enable Jenkins Service
+```bash
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
 sudo systemctl status jenkins
-  Allow Jenkins Through Firewall
+```
+> Allow Jenkins Through Firewall
+```bash
 sudo ufw allow 8080/tcp
 sudo ufw status
-  Get Initial Admin Password
+```  
+> Get Initial Admin Password
+```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-  Access Jenkins in Browser
+```
+> Access Jenkins in Browser
+```bash
 http://YOUR_SERVER_IP:8080
+```
 
 
 
-- setting up docker
+### 2. Setting Up Docker
   Update System
 sudo apt update
 sudo apt upgrade -y
