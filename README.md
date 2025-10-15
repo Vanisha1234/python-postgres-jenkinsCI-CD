@@ -106,8 +106,13 @@ Provide the username and password of the database defined in the .env file of th
 provide a unique id to identify db credentials in the jenkins secret manager.
 
 # Dockerizing the application
-please find the docker file to containerize the application along with added comments for explanation in this repository-
-https://github.com/Vanisha1234/Jenkins-Sonar-Integration_CI-Pipeline
+please find the docker file to containerize the application along with added comments for explanation in the present repository.
+
+# Container Orchestration with Docker Compose 
+please find the docker-compose file for container orchestration along with added comments for explanation in the present repository.
+
+# CI/CD with Jenkins
+Please find the Jenkinsfile for automation and deployment in the present repository along with added comments for explanation.
 
 
 
