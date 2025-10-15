@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    container_name: Your_container_name
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             python manage.py runserver 0.0.0.0:8000"
+    environment:
+      DJANGO_SETTINGS_MODULE: VTRYON.settings
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: your_db_hostname
+      DB_PORT: your_db_port
+    ports:
+      - "8000:8000" 
