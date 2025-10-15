@@ -1,0 +1,9 @@
+/* Universal: pull content up slightly on every page */
+/* .main-content .page-content > .container-fluid {
+  margin-top: -19px !important;
+} */
+
+/* Optional: keep breadcrumbs tight */
+.page-title-box .breadcrumb { margin-bottom: 0 !important; }
+
+/*# sourceMappingURL=custom.min.css.map */
