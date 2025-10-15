@@ -1,17 +1,22 @@
+# docker-compose.yml -
+# Uses the Dockerfile to build the image.
+# Allows you to define environment variables for DB, port mappings, and commands.
+# command here overrides the Dockerfile CMD to first migrate DB, collect static files, then run server.
+
 services:
   web:
-    build: .
-    container_name: Your_container_name
-    command: >
-      sh -c "python manage.py migrate &&
+    build: .                                                   # Build Docker image from current directory using Dockerfile
+    container_name: Your_container_name                        # Assign a custom container name
+    command: >                                                 # Override default CMD to run migrations, collect static files, then start server
+      sh -c "python manage.py migrate &&                       
              python manage.py collectstatic --noinput &&
              python manage.py runserver 0.0.0.0:8000"
-    environment:
-      DJANGO_SETTINGS_MODULE: VTRYON.settings
-      DB_NAME: ${DB_NAME}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
-      DB_HOST: your_db_hostname
-      DB_PORT: your_db_port
-    ports:
+    environment:                                               # Pass environment variables (can be used inside Django settings.py)
+      DJANGO_SETTINGS_MODULE: VTRYON.settings                  # Django settings module from .env
+      DB_NAME: ${DB_NAME}                                      # Database name fetched from jenkins
+      DB_USER: ${DB_USER}                                      # Database user name fetched from jenkins
+      DB_PASSWORD: ${DB_PASSWORD}                              # Database password fetched from jenkins
+      DB_HOST: your_db_hostname                                # Database host
+      DB_PORT: your_db_port                                    # Database port
+    ports:                                                     # Map container port 8000 to host port 8000
       - "8000:8000" 

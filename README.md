@@ -89,5 +89,37 @@ GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;
 exit
   Test login with new user
 psql -h localhost -U myuser -d mydatabase
+  Also make sure postgresql.conf allows listening on other IPs
+sudo nano /etc/postgresql/15/main/postgresql.conf
+change #listen_addresses = 'localhost' -> listen_addresses = '*'
+  Add an entry to allow connections over the network
+host    mydatabase    myuser    192.168.1.50/32    md5 (for specific ip)
+host    mydatabase    myuser    192.168.1.0/24    md5  (for a subnet)
 
+- integrating Jenkins and github(Source Code Management Tool)
+Please find the step-by-step guide to integrate Jenkins and Github in the following repository
+https://github.com/Vanisha1234/Jenkins-Sonar-Integration_CI-Pipeline
+
+- Adding Database Credentials to Jenkins to avoid hard-coding
+Jenkins -> Manage Jenkins -> Credentials -> global -> add credentials
+Provide the username and password of the database defined in the .env file of the source code.
+provide a unique id to identify db credentials in the jenkins secret manager.
+
+# Dockerizing the application
+please find the docker file to containerize the application along with added comments for explanation in the present repository.
+
+# Container Orchestration with Docker Compose 
+please find the docker-compose file for container orchestration along with added comments for explanation in the present repository.
+
+# CI/CD with Jenkins
+Please find the Jenkinsfile for automation and deployment in the present repository along with added comments for explanation.
+
+# Creating a Pipeline job on Jenkins
+STEP 1 : Jenkins Dashboard > New Item > Provided Item Name > Select Pipeline
+STEP 2 : Pipeline > Choose Definition as Pipeline Script from SCM > Choose SCM as Git
+STEP 3 : Provide Git Repo URL and github credentials id under which git token for integration was stored.
+STEP 4 : Specify the Git Branch from where the code will be pulled.
+
+Key points to note :
+Do allow the ip of the host on which project is being deployed in the settings.py file (Allowed hosts section)
 
