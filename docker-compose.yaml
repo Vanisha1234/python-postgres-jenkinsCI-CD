@@ -1,3 +1,8 @@
+# docker-compose.yml -
+# Uses the Dockerfile to build the image.
+# Allows you to define environment variables for DB, port mappings, and commands.
+# command here overrides the Dockerfile CMD to first migrate DB, collect static files, then run server.
+
 services:
   web:
     build: .                                                   # Build Docker image from current directory using Dockerfile
