@@ -96,7 +96,17 @@ change #listen_addresses = 'localhost' -> listen_addresses = '*'
 host    mydatabase    myuser    192.168.1.50/32    md5 (for specific ip)
 host    mydatabase    myuser    192.168.1.0/24    md5  (for a subnet)
 
-  
+- integrating Jenkins and github(Source Code Management Tool)
+Please find the step-by-step guide to integrate Jenkins and Github in the following repository
+https://github.com/Vanisha1234/Jenkins-Sonar-Integration_CI-Pipeline
+
+- Adding Database Credentials to Jenkins to avoid hard-coding
+Jenkins -> Manage Jenkins -> Credentials -> global -> add credentials
+Provide the username and password of the database defined in the .env file of the source code.
+provide a unique id to identify db credentials in the jenkins secret manager.
+
+# Dockerizing the application
+please find the docker file to containerize the application along with added comments for explanation in this repository
 
 
 
