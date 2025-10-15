@@ -29,6 +29,9 @@ pipeline {
                         # Run in detached mode
                         docker compose up -d
 
+                        # Automatically remove old images after build
+                        docker image prune -f
+
                         echo "Deployment complete. Containers running:"
                         docker ps
                     '''
