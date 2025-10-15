@@ -1,3 +1,10 @@
+// Jenkinsfile -
+// Automates deployment.
+// Fetches DB credentials from Jenkins.
+// Exports env vars for docker-compose.
+// Runs docker compose down → docker compose build → docker compose up -d.
+// Essentially triggers the building and running of your containers defined in docker-compose.yml.
+
 pipeline {
     agent any                                                                 // Run on any available Jenkins agent
 
