@@ -1,3 +1,8 @@
+# Dockerfile -
+# Defines how Django application image is built.
+# Installs Python, dependencies, and copies your code into /app.
+# Exposes port 8000 and sets the default command to run Django.
+
 FROM python:3.11                                               # Base image: official Python 3.11 image from Docker Hub
 
 ENV PYTHONDONTWRITEBYTECODE=1                                  # Prevent Python from writing .pyc files
