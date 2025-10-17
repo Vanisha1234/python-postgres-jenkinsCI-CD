@@ -5,7 +5,7 @@ Below are some screenshots showcasing the deployed application:
 ---
 
 ### Screenshot 1
-***Description: Overview of the deployed application interface.***
+***Description: Overview of the deployed application interface when browsed.***
 
 ![Application Screenshot 1](https://github.com/user-attachments/assets/c6653f3b-b048-435c-8507-dfd293cfd954)
 
@@ -27,4 +27,22 @@ Below are some screenshots showcasing the deployed application:
 
 ![Application Screenshot 3](https://github.com/user-attachments/assets/4dc891b2-029b-4e7b-bb72-6e3956410c82)
 
+---
+
+### Screenshot 4
+***Description: Database Connection with the Application***
+
+Added a new store via application's interface:
+
+![Application Screenshot 3](https://github.com/user-attachments/assets/288ce561-6ff8-459a-b1f8-cacc383960a4)
+
+Data being reflected in the PostgreSQL:
+
+![Application Screenshot 3](https://github.com/user-attachments/assets/17378ec7-d551-47ca-bd46-f33ed14f4601)
+![Application Screenshot 3](https://github.com/user-attachments/assets/b8abfe15-acd6-44f1-926d-4ee6205be8e9)
+
+---
+
+### Screenshot 5
+***Description: Jenkins Console Output showing successful build and deployment.***
 
