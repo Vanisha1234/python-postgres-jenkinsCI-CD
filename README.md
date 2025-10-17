@@ -216,7 +216,7 @@ host    mydatabase    myuser    192.168.1.0/24    md5  (for a subnet)
 
 # Dockerizing the application
 ***Please find the docker file to containerize the application in the present repository along with added comments for explanation.***
-[Dockerfile](https://github.com/Vanisha1234/python-postgres-jenkinsCI-CD/blob/8297ca805bb3693da48ecd6c114f43814676fd25/JenkinsPipeline_ConsoleOutput)
+[Dockerfile](https://github.com/Vanisha1234/python-postgres-jenkinsCI-CD/blob/a7f32dbdbba6a3ba4e5be6d80f6e06ef5111f5da/Dockerfile)
 
 ---
 
