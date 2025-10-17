@@ -44,6 +44,6 @@ Data being reflected in the PostgreSQL:
 ---
 
 ### Screenshot 5
-***Description: Jenkins Console Output showing successful build and deployment.***
-You can view the complete Jenkins console output here: 
+***Description: Jenkins Console Output showing successful build and deployment.*** \
+You can view the complete Jenkins console output here: \
 👉 [JenkinsPipeline_ConsoleOutput](https://github.com/Vanisha1234/python-postgres-jenkinsCI-CD/blob/8297ca805bb3693da48ecd6c114f43814676fd25/JenkinsPipeline_ConsoleOutput)
