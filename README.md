@@ -244,7 +244,7 @@ host    mydatabase    myuser    192.168.1.0/24    md5  (for a subnet)
 
 ---
 
-You can view the Deployment Screenshots here: \
-👉 [DeploymentScreenshots](https://github.com/Vanisha1234/python-postgres-jenkinsCI-CD/blob/8297ca805bb3693da48ecd6c114f43814676fd25/JenkinsPipeline_ConsoleOutput)
+You can view the Successful Deployment Screenshots here: \
+👉 [DeploymentScreenshots](https://github.com/Vanisha1234/python-postgres-jenkinsCI-CD/blob/f7a4a062083a8f5bfa0d888aebed2aa9f52145e4/DeploymentScreenshots.md)
 
-
+---
