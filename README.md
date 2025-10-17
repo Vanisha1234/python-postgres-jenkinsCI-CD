@@ -228,7 +228,7 @@ host    mydatabase    myuser    192.168.1.0/24    md5  (for a subnet)
 
 # Jenkinsfile for automation
 ***Please find the Jenkinsfile for automation and deployment in the present repository along with added comments for explanation.***
-[Jenkinsfile](https://github.com/Vanisha1234/python-postgres-jenkinsCI-CD/blob/8297ca805bb3693da48ecd6c114f43814676fd25/JenkinsPipeline_ConsoleOutput)
+[Jenkinsfile](https://github.com/Vanisha1234/python-postgres-jenkinsCI-CD/blob/f265c2bad8c3e803d9e66e95466f441d3eb1df9c/Jenkinsfile)
 
 ---
 
