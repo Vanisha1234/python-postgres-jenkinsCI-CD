@@ -236,11 +236,15 @@ host    mydatabase    myuser    192.168.1.0/24    md5  (for a subnet)
 
 **STEP 1 :** Jenkins Dashboard > New Item > Provided Item Name > Select Pipeline \
 **STEP 2 :** Pipeline > Choose Definition as Pipeline Script from SCM > Choose SCM as Git \
-**STEP 3 :** Provide Git Repo URL and github credentials id under which git token for integration was stored. \
-**STEP 4 :** Specify the Git Branch from where the code will be pulled.
-**STEP 5 :** Apply & Save the changes
-**STEP 6 :** Build the Pipeline
-**STEP 7 :** Once the Pipeline is completed, It displays ***Pipeline Successful***
+**STEP 3 :** Provide Git Repo URL and github credentials id under which git token for integration was stored \
+**STEP 4 :** Specify the Git Branch from where the code will be pulled. \
+**STEP 5 :** Apply & Save the changes \
+**STEP 6 :** Build the Pipeline \
+**STEP 7 :** Once the Pipeline is completed, It displays the following message:
+<p align="center">
+  <b>[Pipeline] End of Pipeline</b><br>
+  <b>Finished: SUCCESS ✅</b>
+</p>
 
 ## ⚠️ Key Points to Note
 - Do allow the IP of the host on which the project is being deployed in the `settings.py` file (`ALLOWED_HOSTS` section).
